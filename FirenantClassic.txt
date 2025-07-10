@@ -1,0 +1,262 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local executorpage = Instance.new("Frame")
+local input = Instance.new("TextBox")
+local exec = Instance.new("TextButton")
+local clear = Instance.new("TextButton")
+local aura = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.510991871, 0, 0.480581373, 0)
+Frame.Size = UDim2.new(0, 463, 0, 432)
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0, 0, 0.0462962948, 0)
+ImageLabel.Size = UDim2.new(0, 463, 0, 412)
+ImageLabel.ZIndex = 0
+ImageLabel.Image = "rbxassetid://140083695140270"
+
+executorpage.Name = "executorpage"
+executorpage.Parent = Frame
+executorpage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+executorpage.BackgroundTransparency = 1.000
+executorpage.BorderColor3 = Color3.fromRGB(0, 0, 0)
+executorpage.BorderSizePixel = 0
+executorpage.Position = UDim2.new(0, 0, 0.0932476148, 0)
+executorpage.Size = UDim2.new(0, 457, 0, 283)
+
+input.Name = "input"
+input.Parent = executorpage
+input.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+input.BackgroundTransparency = 0.400
+input.BorderColor3 = Color3.fromRGB(0, 255, 60)
+input.BorderSizePixel = 2
+input.Position = UDim2.new(0.019693654, 0, -0.021527186, 0)
+input.Size = UDim2.new(0, 444, 0, 358)
+input.ClearTextOnFocus = false
+input.Font = Enum.Font.Code
+input.MultiLine = true
+input.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+input.PlaceholderText = "--[\\n          Firenant\\n--["
+input.Text = ""
+input.TextColor3 = Color3.fromRGB(17, 255, 0)
+input.TextSize = 14.000
+input.TextXAlignment = Enum.TextXAlignment.Left
+input.TextYAlignment = Enum.TextYAlignment.Top
+
+exec.Name = "exec"
+exec.Parent = executorpage
+exec.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+exec.BackgroundTransparency = 0.400
+exec.BorderColor3 = Color3.fromRGB(0, 255, 60)
+exec.BorderSizePixel = 2
+exec.Position = UDim2.new(0.019693654, 0, 1.2620132, 0)
+exec.Size = UDim2.new(0, 104, 0, 33)
+exec.Font = Enum.Font.Arial
+exec.Text = "Execute"
+exec.TextColor3 = Color3.fromRGB(255, 255, 255)
+exec.TextSize = 18.000
+exec.TextWrapped = true
+
+clear.Name = "clear"
+clear.Parent = executorpage
+clear.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+clear.BackgroundTransparency = 0.400
+clear.BorderColor3 = Color3.fromRGB(0, 255, 60)
+clear.BorderSizePixel = 2
+clear.Position = UDim2.new(0.763675988, 0, 1.2620132, 0)
+clear.Size = UDim2.new(0, 104, 0, 33)
+clear.Font = Enum.Font.Arial
+clear.Text = "Clear"
+clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+clear.TextSize = 18.000
+clear.TextWrapped = true
+
+aura.Name = "aura"
+aura.Parent = executorpage
+aura.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+aura.BackgroundTransparency = 0.400
+aura.BorderColor3 = Color3.fromRGB(0, 255, 60)
+aura.BorderSizePixel = 2
+aura.Position = UDim2.new(0.260393888, 0, 1.2620132, 0)
+aura.Size = UDim2.new(0, 104, 0, 33)
+aura.Font = Enum.Font.Arial
+aura.Text = "Aura"
+aura.TextColor3 = Color3.fromRGB(255, 255, 255)
+aura.TextSize = 18.000
+aura.TextWrapped = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.00191212725, 0, -0.000924710883, 0)
+TextLabel.Size = UDim2.new(0, 132, 0, 19)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Firenant classic"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 24.000
+
+ImageLabel_2.Parent = ScreenGui
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(170, 170, 170)
+ImageLabel_2.BackgroundTransparency = -0.010
+ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.Position = UDim2.new(0.0317660645, 0, 0.708800673, 0)
+ImageLabel_2.Size = UDim2.new(0, 89, 0, 89)
+ImageLabel_2.Image = "rbxassetid://84204439123061"
+
+UICorner.CornerRadius = UDim.new(0, 100)
+UICorner.Parent = ImageLabel_2
+
+UIAspectRatioConstraint.Parent = ImageLabel_2
+
+-- Scripts:
+
+local function JGWX_fake_script() -- exec.Script 
+	local script = Instance.new('Script', exec)
+
+	script.Parent.event.OnServerEvent:Connect(function(p,strin)
+		require(script.vLua)(strin)()
+	end)
+end
+coroutine.wrap(JGWX_fake_script)()
+local function NKOK_fake_script() -- exec.LocalScript 
+	local script = Instance.new('LocalScript', exec)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.event:FireServer( script.Parent.Parent.input.Text)	
+	end)
+end
+coroutine.wrap(NKOK_fake_script)()
+local function UCKQRG_fake_script() -- clear.LocalScript 
+	local script = Instance.new('LocalScript', clear)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.input.Text = ""
+	end)
+end
+coroutine.wrap(UCKQRG_fake_script)()
+local function BJEE_fake_script() -- aura.AuraAttachLocalScript 
+	local script = Instance.new('LocalScript', aura)
+
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	-- Предполагаем, что этот скрипт находится внутри ScreenGui, где лежит Aura и кнопка
+	local gui = script.Parent
+	local auraTemplate = gui:FindFirstChild("Aura")
+	
+	-- Найти кнопку (замените "Button" на имя вашей кнопки, если она есть)
+	local button = gui:FindFirstChild("Button") or auraTemplate
+	
+	button.MouseButton1Click:Connect(function()
+	    local character = player.Character or player.CharacterAdded:Wait()
+	    if not character then return end
+	
+	    -- Найти туловище (UpperTorso для R15, Torso для R6)
+	    local torso = character:FindFirstChild("UpperTorso") or character:FindFirstChild("Torso")
+	    if not torso then return end
+	
+	    -- Проверить, нет ли уже Aura
+	    if character:FindFirstChild("Aura") then return end
+	
+	    -- Клонировать Aura
+	    local auraClone = auraTemplate:Clone()
+	    auraClone.Anchored = false
+	    auraClone.CanCollide = false
+	    auraClone.Name = "Aura"
+	    auraClone.Parent = character
+	
+	    -- Создать Weld для привязки к туловищу
+	    local weld = Instance.new("Weld")
+	    weld.Part0 = torso
+	    weld.Part1 = auraClone
+	    weld.C0 = CFrame.new(0, -2, 0) -- настройте смещение при необходимости
+	    weld.Parent = auraClone
+	
+	    -- Переместить Aura в позицию туловища
+	    auraClone.CFrame = torso.CFrame
+	end)
+	
+	
+end
+coroutine.wrap(BJEE_fake_script)()
+local function PLHJJL_fake_script() -- Frame.Dragify 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(PLHJJL_fake_script)()
+local function VMLMJUC_fake_script() -- ImageLabel_2.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel_2)
+
+	local gui = script.Parent
+	while task.wait(.005) do
+		script.Parent.Rotation += 1
+		if gui.Rotation == 360 then
+			gui.Rotation = 0
+		end
+	end
+	
+end
+coroutine.wrap(VMLMJUC_fake_script)()
